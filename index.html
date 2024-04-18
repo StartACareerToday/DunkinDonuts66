@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Money Counter!</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Ubuntu:wght@300;400;500&display=swap');
+
+*{
+  font-family: "Kdam Thmor Pro", sans-serif;
+}
+
+body {
+    background: #C9CCEB ;
+    color: #000000  ;
+}
+
+nav {
+    background-color: #f0f0f0; /* standard background color for navbar */
+    padding: 10px 0;
+    border-radius: 5px;
+}
+
+nav h1 {
+    margin: 5px;
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+
+.bw{
+  display: flex;
+  justify-content: space-between;
+  margin: 5px;
+}
+
+.balance {
+    font-size: 18px;
+    color: white;
+    background: #AFA527;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.withdraw-btn{
+    background-color: #007bff;
+    color: #FFFFFF;
+    font-family: "Kdam Thmor Pro", sans-serif;
+    border-radius: 4px;
+    font-size: 18px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    display: block;
+    text-align: center;
+}
+
+.container-buttons {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.button {
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px 1px #172296  ;
+}
+
+.timer {
+    font-size: 18px;
+    margin-top: 20px;
+    background-color: lightgreen;
+    padding: 5px 10px;
+}
+
+footer {
+    margin-top: 40px;
+    text-align: center;
+}
+
+input[type="text"] {
+    padding: 8px;
+    margin-right: 10px;
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+</style>
+</head>
+<body>
+
+<nav>
+    <h1>Money Counter</h1>
+    <div class="bw">
+    <div class="balance">Balance: $<span id="balance">0</span></div>
+    <button class="withdraw-btn" onclick="withdraw()">Withdraw</button>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="container-buttons">
+        <div class="btn1">
+            <button class="button" onclick="increaseBalance(); window.open('https://smrturl.co/o/506799/53466828?s1=nvghnvv')">Click Here to Earn $50! </button>
+        </div>
+        <div class="btn1">
+            <button class="button" onclick="increaseBalance(); window.open('https://smrturl.co/o/506799/53449848?s1=bvhjbb', '_blank')">Click Here to Earn $50! </button>
+        </div>
+ <div class="btn1">
+ <button class="button" onclick="increaseBalance(); window.open('https://smrturl.co/o/506799/53206664?s1=bhbbg', '_blank')">Click Here to Earn $50! </button>
+  </div>
+
+ <div class="btn1">
+   <button class="button" onclick="increaseBalance(); window.open('https://smrturl.co/o/506799/53460081?s1=ghjjb', '_blank')">Click Here to Earn $50! </button>
+ </div>
+ <div class="btn1">
+   <button class="button" onclick="increaseBalance(); window.open('https://smrturl.co/o/506799/53251150?s1=vhhjb', '_blank')">Click Here to Earn $50! </button>
+ </div>
+ 
+  
+
+ 
+ 
+        <!-- Add other buttons similarly -->
+    </div>
+    <p>You should complete 1 task within 5 minutes.</p>
+    <div class="timer" id="timer">5:00</div>
+</div>
+
+<footer>
+    <form id="signup-form" action="https://smrturl.co/o/506799/53177516?s1=chjnbv" method="get" target="_blank">
+        <input type="text" placeholder="Username" id="username" required="required"><br>
+        <input type="submit" value="Sign Up">
+    </form>
+</footer>
+
+<script>
+let balance = 0;
+let countdown;
+
+function increaseBalance() {
+    balance += 50;
+    document.getElementById("balance").innerText = balance;
+}
+
+function withdraw() {
+    if (balance >= 100) {
+        balance -= 100;
+        document.getElementById("balance").innerText = balance;
+        window.open('https://smrturl.co/o/506799/53177516?s1=chjnbv', '_blank');
+    } else {
+        alert("Minimum Withdrawal Balance is $100");
+    }
+}
+
+function startTimer(duration, display) {
+    let timer = duration, minutes, seconds;
+    countdown = setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+            timer = duration;
+        }
+    }, 1000);
+}
+
+window.onload = function () {
+    let fiveMinutes = 60 * 5,
+        display = document.querySelector('#timer');
+    startTimer(fiveMinutes, display);
+};
+
+document.getElementById("signup-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+    let username = document.getElementById("username").value;
+    window.open('https://smrturl.co/o/506799/53177516?s1=hdjehe', '_blank');
+});
+</script>
+
+</body>
+</html>
